@@ -1,0 +1,3 @@
+empregado(matricula, cpf, endereco, dep, data_nasc, nome)
+automovel(placa, ano_fabr, marca, modelo, cor, chassi)
+tem(id_documento, matricula, placa)

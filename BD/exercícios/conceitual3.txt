@@ -1,0 +1,12 @@
+empresa(cnpj, inscricao_estadual, razao_social)
+
+departamento(numero_dep, cnpj, nome)
+
+funcionario(matricula, numero, nome, pis, endereco, salario, sexo, data_nasc)
+
+projetos(numero_p, descricao, localizacao)
+
+dep_projetos(numero_dep, numero_p)
+
+func_projetos(id_atua, horas, matricula, numero_p)
+

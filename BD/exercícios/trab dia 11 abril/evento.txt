@@ -1,0 +1,17 @@
+professor(comprovante_inscricao)
+
+externo(cnpj)
+
+aluno(RA)
+
+concerne(id_concerne, id_participante, comprovante_inscricao, cnpj, RA)
+
+participante(id_participante, id_evento, nome, endereco, cpf, rg, cell, fone, email)
+
+frequencia(id_frequencia, id_evento, horario_entrada, horario_saida, data)
+
+participante_frequencia(id_gera, id_participante, id_frequencia)
+
+evento(id_evento, local, contato, tipo, titulo, palestrante, ch, data, duracao)
+
+

@@ -1,0 +1,15 @@
+aula bd 12/05
+
+SÓ PARA OS CAMPOS FOREIGN KEY
+
+FOREIGN KEY (campo_estrangeiro)
+REFERENCES nome-table-ref(chave estrangeira)
+
+
+ON DELETE <ação>
+ON UPDATE <ação>
+
+NO ACTION: impede a ação na tebal pai (a q tem PK)
+CASCADE: repete a ação fewita na tabela pai para a tabela filho.
+SET NULL: valores de referência são alterados para null.
+DEFAULT: valores de referência são mudados para default (padrão).

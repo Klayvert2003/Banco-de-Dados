@@ -1,0 +1,6 @@
+empresa(cnpj, inscricao_estadual, razao_social)
+departamento(numero_dep, cnpj,nome)
+funcionario(matricula,numero_dep,nome,PIS, endereco, salario, sexo, dat_nasc)
+projetos(numero_p, descricao, localizacao)
+atua(id_atua,numero_p,horas)
+possui(id_atua, numero_p, matricula, horas)

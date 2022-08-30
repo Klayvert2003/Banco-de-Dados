@@ -1,0 +1,7 @@
+CANDIDATO(nomeCandidato, cpf, numIdentidade)
+
+CONCURSO(CodConcurso, Local, dataRealizacao, horaRealizacao)
+
+INSCRICAO(numInscricao, cpf, CodCargo, CodConcurso)
+
+CARGO(CodCargo, nomCargo, qtdeVagas)

@@ -1,0 +1,5 @@
+departamento(id_dep, nome_dep, funcao,ch)
+disciplina(id_dic,id_curso, id_dep tipo_disc, ch)
+curso(id_curso, ch, nome_curso, tipo_curso)
+aluno(id_aluno, rg, cpf, nome, enderco, sexo)
+inscricao(id_aluno, id_curso, id_inscricao, dat_insc))

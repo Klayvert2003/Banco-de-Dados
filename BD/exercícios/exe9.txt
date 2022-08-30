@@ -1,0 +1,3 @@
+cliente(id_c, nome, cpf)
+taxi(placa, marca, modelo, anofab)
+corrida(id_corrida, id_c, placa, data_pedido, valor)

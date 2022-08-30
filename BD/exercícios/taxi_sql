@@ -1,0 +1,33 @@
+/* taxi_log: */
+
+CREATE TABLE cliente (
+    id_c VARCHAR PRIMARY KEY,
+    nome VARCHAR,
+    cpf VARCHAR
+);
+
+CREATE TABLE taxi (
+    placa CHARACTER PRIMARY KEY,
+    marca VARCHAR,
+    modelo VARCHAR,
+    anofab DATE,
+    id_c VARCHAR
+);
+
+CREATE TABLE corrida (
+    fk_taxi_placa CHARACTER,
+    fk_cliente_id_c VARCHAR,
+    data_pedido DATE,
+    id_corrida VARCHAR PRIMARY KEY,
+    valor NUMERIC
+);
+ 
+ALTER TABLE corrida ADD CONSTRAINT FK_corrida_2
+    FOREIGN KEY (fk_taxi_placa)
+    REFERENCES taxi (placa)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE corrida ADD CONSTRAINT FK_corrida_3
+    FOREIGN KEY (fk_cliente_id_c???)
+    REFERENCES ??? (???)
+    ON DELETE SET NULL;

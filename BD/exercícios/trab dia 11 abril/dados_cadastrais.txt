@@ -1,0 +1,11 @@
+departamento_lotacao(depto, data_inicio, data_fim, ch)
+
+cargo_ocupado(id_cargo, cargo, data_inicio, data_fim, ch)
+
+dep_cargo(id_contem, id_cargo, depto)
+
+dado_func(matricula, depto, est_civil, endereco, nome, data_admissao, nacionalidade, data_nasc, rg, sexo, cpf, tell, cell)
+
+dependentes(certidao_nasc, rg, data_nasc, nome)
+
+dependentes_dadofunc(id_possui, certidao_nasc, matricula)

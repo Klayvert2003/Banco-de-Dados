@@ -1,0 +1,5 @@
+engenheiro(id_engenheiro, nome, cpf, fone)
+
+projeto(id_projeto, titulo)
+
+engenheiro_projeto(id_atua, id_engenheiro, id_projeto, horas, funcao)

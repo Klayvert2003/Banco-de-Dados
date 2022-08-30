@@ -1,0 +1,5 @@
+CLIENTE(id_cliente, nome, rua_avenida, numero, bairro, cep, cidade, estado)
+
+EMPRESTIMOS(id_agencia, num_emprestimo, valor_emprestimo, tx_juros, nome_agencia, nome_gerente)
+
+AGENCIA(nome_agencia, nome_gerente)

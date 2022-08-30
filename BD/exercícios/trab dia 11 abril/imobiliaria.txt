@@ -1,0 +1,14 @@
+pessoa(cpf, nome, fone, cell, email, rg, sexo, endereco)
+
+imobiliaria(cnpj, endereco, contato, email, advogado_imobiliario, avaliacao)
+
+contrata(id_contrata, cpf, cnpj)
+
+condominio(id_condominio, cnpj, departamento, endereco)
+
+reside(id_reside, cpf, id_condominio)
+
+apartamento(numero, id_condominio, tipo, bloco, bairro, CEP, valor_aluga, valor_compra)
+
+casa(numero, id_condominio, CEP, bairro, rua, valor_aluga, valor_compra, tipo)
+
