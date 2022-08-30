@@ -1,0 +1,76 @@
+Prática 2 – Linguagem SQL
+
+Nome completo:
+
+
+ 
+
+
+
+Execute os campos no XAMP e descreva cada comando nas questões a seguir:
+
+
+1)	Criar o banco de dados TAXI.
+R: CREATE DATABASE klayvert_táxi;
+
+2)	Criar as tabelas e os campos conforme imagem acima. Utilize três restrições: Not Null, Unique e Autoincrement. Não esqueça de inserir as chaves primárias e estrangeiras.
+R: CREATE TABLE cliente 
+( 
+cli_id int AUTO_INCREMENT PRIMARY KEY,
+nome varchar(40) NOT NULL, 
+cpf int(11) DEFAULT NULL 
+);
+
+CREATE TABLE taxi
+( 
+placa varchar(20) UNIQUE,
+marca varchar(40) DEFAULT NULL, 
+modelo varchar(40) DEFAULT NULL, 
+anofab int NOT NULL, 
+PRIMARY KEY(placa) 
+);
+
+
+CREATE TABLE corrida 
+( 
+datapedido date not null, 
+cli_id int AUTO_INCREMENT, 
+placa varchar UNIQUE, 
+FOREIGN KEY (cli_id) REFERENCES cliente (cli_id), 
+FOREIGN KEY (placa) REFERENCES taxi (placa) 
+);
+
+
+
+3)	Mostre as colunas das suas tabelas.
+R: SELECT * FROM cliente, corrida, taxi;
+
+4)	Insira os registros nas tabelas.
+R:
+INSERT INTO cliente VALUES (1133, 'Valderez', 32345567588), (1234, 'Malaquias', 44823112542), (1532, 'Asdrubal', 44875422322);  
+
+INSERT INTO taxi VALUES ('BRO0900', 'Chevrolet', 'Corsa', '2005'), ('IAI2909', 'Wolksvagen', 'Gol', '2000'),('SAS2333', 'Ford', 'Fiesta', '1999'),  ('SUS2889', 'Ford', 'Fiesta', '2001'), ('VEI8992', 'Wolksvagen', 'Santana', '2003'); 
+
+INSERT INTO corrida VALUES ('2022/03/22', '1133', 'BRO0900'), ('2006/20/12', '1234', 'IAI2909');
+
+
+5)	Altere dados de um cliente e de um Taxi.
+R: UPDATE cliente SET nome = 'Valderez Júnior' WHERE cli_id = 1133;
+
+    UPDATE taxi SET marca = 'Gol Quadrado' WHERE placa = 'VEI8992';
+    
+
+6)	Delete um taxista e adicione duas corridas.
+R: DELETE FROM taxi WHERE placa = 'SAS2333';
+
+     INSERT INTO cliente (cli_id) VALUES ('1099'), ('1111');
+   INSERT INTO taxi (placa) VALUES ('MAM9090'), ('LAK3209');	
+   INSERT INTO corrida VALUES ('2022/03/12', '1099', 'MAM9090'), (2001/02/01', '1111', 'LAK3209');
+
+7)	Visualize os registros das tabelas separadamente, utilizando o comando SELECT. 
+R: SELECT * FROM `cliente`;
+SELECT * FROM `corrida`;
+SELECT * FROM `taxi`;
+
+
+
