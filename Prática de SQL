@@ -1,0 +1,42 @@
+Lista de exercícios – Banco de Dados
+Realize os comandos no XAMPP para o Banco de Dados “aula3” e insira neste documento o código e resultado.
+Nome completo: Klayvert Ryan Alves
+
+1.	Liste o sobrenome de todos os funcionários.
+R: SELECT (Sobrenome) FROM funcionario;
+
+2.	Liste o nome de todos os departamentos cujo orçamento seja maior que 15000.
+R: SELECT * FROM departamento WHERE Orcamento > 15000;
+
+3.	Liste todos os dados de todos os funcionários cujo sobrenome seja “Coelho” ou “Pereira”.
+R: SELECT * FROM funcionario WHERE Sobrenome='Coelho' OR Sobrenome='Pereira';
+
+4.	Liste todos os dados de todos os funcionários que trabalham no departamento 1.
+R: SELECT * FROM departamento WHERE iddepartament o= 1;
+
+5.	Liste os nomes de todos os funcionários que trabalham nos departamentos 1 e 2.
+R: SELECT Nome FROM funcionario WHERE iddepartamento=1 OR iddepartamento=2;
+
+6.	Liste os nomes de todos os funcionários cujo sobrenome termine em eira.
+R: SELECT * FROM funcionario WHERE Sobrenome LIKE '%eira';
+
+7.	Insira um departamento Compras com o orçamento de 100000 e adicione um funcionário “Juliano Souza”, com matrícula 788, nesse novo departamento.
+R: INSERT  INTO departamento VALUES (6, 'Compras', 100000);
+   INSERT  INTO funcionario VALUES (788, 'Juliano', 'Souza', 6);
+
+8.	Migrar todos os funcionários do departamento “Pesquisa e desenvolvimento” para o departamento de “TI”.
+R: UPDATE funcionario SET iddepartamento=2 WHERE iddepartamento=4;
+
+9.	Exclua o departamento “Pesquisa e desenvolvimento”.
+R: DELETE FROM departamento WHERE iddepartamento=4;
+
+10.	Adicione o funcionário “Paulo Aguiar” e crie um id para ele, no departamento de TI.
+R: INSERT  INTO funcionario VALUES(888, 'Paulo', 'Aguiar', 2);
+
+11.	Crie duas consultas à sua escolha, envolvendo dados de duas tabelas.
+R: SELECT * FROM departamento LIMIT 3;
+
+SELECT COUNT(*) idFuncionario FROM funcionario GROUP BY iddepartamento HAVING iddepartamento=2;
+
+
+
